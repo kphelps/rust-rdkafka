@@ -98,9 +98,9 @@ fn build_librdkafka() {
     }
 
     let mut ldflags = Vec::new();
-    if let Ok(var) = env::var("LDFLAGS") {
-        ldflags.push(var);
-    }
+    // if let Ok(var) = env::var("LDFLAGS") {
+    //     ldflags.push(var);
+    // }
 
     if env::var("CARGO_FEATURE_SSL").is_ok() {
         configure_flags.push("--enable-ssl".into());
